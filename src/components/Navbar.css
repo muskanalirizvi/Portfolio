@@ -1,0 +1,115 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 14, 23, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.brand {
+  font-family: var(--mono);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-h);
+  display: inline-block;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.brand:hover {
+  color: var(--accent);
+  text-decoration: none;
+  transform: scale(1.04);
+}
+
+.nav-links ul {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: var(--text);
+  font-weight: 500;
+  font-size: 15px;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--text-h);
+  border-bottom-color: var(--accent);
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.menu-toggle span {
+  width: 24px;
+  height: 2px;
+  background: var(--text-h);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--border);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+
+  .nav-links.open {
+    max-height: 300px;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 24px 16px;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px 0;
+    border-bottom: none;
+  }
+}

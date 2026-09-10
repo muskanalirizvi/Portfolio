@@ -1,0 +1,38 @@
+.back-link {
+  display: inline-block;
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+.project-detail .project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 24px;
+}
+
+.project-detail .project-tags li {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.project-description {
+  max-width: 700px;
+  font-size: 17px;
+  margin-bottom: 32px;
+}
+
+.project-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
