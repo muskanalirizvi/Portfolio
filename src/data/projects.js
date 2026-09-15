@@ -2,7 +2,7 @@ const projects = [
   {
     id: 'ai-receptionist',
     category: 'Agentic AI',
-    title: 'AI Receptionist — Clinic Front-Desk System',
+    title: 'Smart Reception Assistant- Full-Stack Project',
     summary:
       'Full-stack clinic front-desk platform with a LangGraph AI assistant for scheduling and natural-language (incl. Urdu) queries.',
     description:
@@ -20,8 +20,8 @@ const projects = [
       'bcrypt',
       'SMTP',
     ],
-    github: 'https://github.com/muskanalirizvi',
-    demo: '',
+    github: 'https://github.com/muskanalirizvi/Smart-Reception-Assistant.git',
+    demo: 'https://drive.google.com/file/d/1XQPZrRWFv-4l-7ncn3Fq2V7xq-EQzs2S/view?usp=sharing',
   },
   {
     id: 'ptw-lototo-digitalization',
@@ -42,51 +42,55 @@ const projects = [
     description:
       'Built a stacked ensemble model using XGBoost and Random Forest with Logistic Regression as the meta-classifier. Addressed class imbalance through oversampling and applied robust data preprocessing techniques, achieving 99.92% accuracy with strong clinical relevance and predictive reliability.',
     tags: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'Scikit-learn'],
-    github: 'https://github.com/muskanalirizvi',
+    github: 'https://github.com/muskanalirizvi/Project-Random-Forest-for-Liver-Disease-Prediction-with-Oversampling.git',
     demo: '',
   },
   {
-    id: 'sentiment-dashboard-api',
+    id: 'biblioteq',
+    category: 'Full-Stack Development',
+    title: 'Biblioteq – AI-Powered Library Management System',
+    summary:
+      'Full-stack library management system with role-based access and AI-powered book recommendations.',
+    description:
+      'Developed a full-stack library management system with a FastAPI backend and React frontend, supporting role-based access (student, faculty, librarian) via JWT authentication. Designed and implemented a PostgreSQL database (deployed on Neon) with a relational schema for books, members, and transactions, including automated fine calculation and borrowing-limit enforcement. Integrated Google Gemini AI to deliver personalized book recommendations based on user reading history, with structured JSON output parsing for reliable UI rendering. Built a librarian admin dashboard for book and member management (CRUD operations, account status control), and deployed the application end-to-end (Render + Vercel).',
+    tags: ['React', 'FastAPI', 'PostgreSQL', 'JWT Authentication', 'Google Gemini AI'],
+    github: 'https://github.com/muskanalirizvi/Biblioteq.git',
+    demo: 'https://biblioteq-six.vercel.app/',
+  },
+  {
+    id: 'ai-travel-planner',
+    category: 'Agentic AI',
+    title: 'AI Travel Planner– Full-Stack Conversational AI Trip Assistant',
+    summary:
+      'Full-stack conversational travel assistant with a LangGraph agent planning trips through natural-language chat.',
+    description:
+      'Built a full-stack conversational travel assistant with a FastAPI backend and LangGraph agent orchestrating Google Gemini to plan trips through natural-language chat. Equipped the agent with tool-calling for real-time weather, currency conversion, distance/route lookup, web search, and Google Calendar event creation, plus MongoDB-backed persistent user preferences. Deployed end-to-end on Render (API) and Vercel (React + Vite frontend) with CORS-secured cross-origin access.',
+    tags: ['React', 'FastAPI', 'LangGraph', 'Google Gemini', 'MongoDB'],
+    github: 'https://github.com/muskanalirizvi/AI-travel-planner.git',
+    demo: 'https://ai-travel-planner-umber-one.vercel.app/',
+  },
+  {
+    id: 'sentimentiq',
     category: 'Machine Learning',
-    title: 'Sentiment Dashboard API',
-    summary: 'FastAPI + Streamlit app for real-time sentiment analysis and visualization.',
+    title: 'SentimentIQ – AI-Powered Sentiment Analysis Tool',
+    summary:
+      'Bidirectional LSTM sentiment analysis app trained on Amazon review data with confidence scoring.',
     description:
-      'Developed a FastAPI backend to analyze sentiment from user reviews and social media posts, with a Streamlit frontend to visualize real-time sentiment trends and analysis scores. Implemented NLP-based sentiment scoring using TextBlob, achieving high interpretability and responsiveness.',
-    tags: ['Python', 'FastAPI', 'TextBlob', 'Pandas', 'Streamlit'],
-    github: 'https://github.com/muskanalirizvi',
+      'Developed a sentiment analysis application using a Bidirectional LSTM neural network, trained on Amazon review data to classify text as Positive or Negative with confidence scoring. Designed the model architecture (Embedding + stacked Bidirectional LSTM layers + Dropout regularization) and implemented a full preprocessing pipeline (tokenization, sequence padding) for consistent inference. Built a Streamlit frontend for real-time predictions, with model and tokenizer artifacts serialized for lightweight, reproducible deployment. Documented the complete training workflow in a Jupyter notebook, covering data preprocessing, model training, and evaluation.',
+    tags: ['Python', 'TensorFlow/Keras', 'Streamlit', 'Pandas'],
+    github: 'https://github.com/muskanalirizvi/SentimentIQ.git',
     demo: '',
   },
   {
-    id: 'tutorix',
-    category: 'Generative AI',
-    title: 'Tutorix — AI-Powered Tutor Chatbot',
-    summary: 'Personalized, step-by-step AI tutoring chatbot with context-aware answers.',
+    id: 'patient-health-api',
+    category: 'Machine Learning',
+    title: 'Patient Health API – CRUD & Diabetes Prediction',
+    summary:
+      'Full-stack patient management system with CRUD operations and a diabetes risk prediction endpoint.',
     description:
-      'Built an AI chatbot for personalized, step-by-step tutoring across multiple subjects. Integrated LangChain and FAISS for context-aware answers using uploaded notes (RAG), with real-time interaction and chat session management in Streamlit.',
-    tags: ['Python', 'Streamlit', 'LangChain', 'FAISS', 'RAG', 'Cerebras API'],
-    github: 'https://github.com/muskanalirizvi',
-    demo: '',
-  },
-  {
-    id: 'customer-shopping-behavior-analysis',
-    category: 'Data Analytics',
-    title: 'Customer Shopping Behavior Analysis',
-    summary: 'Data cleaning, SQL analysis, and a Power BI dashboard on shopping behavior.',
-    description:
-      'Cleaned a 3,900-row dataset in Python; imputed missing ratings using category-level medians and engineered age group and purchase frequency features. Ran 10 SQL queries in SQL Server Management Studio to extract insights on revenue by gender/age group, customer segmentation (New, Returning, Loyal), discount dependency, and subscription behavior. Built a Power BI dashboard with dynamic filters displaying KPIs, revenue by category/age group, and subscription distribution.',
-    tags: ['Python', 'Pandas', 'SQL Server', 'Power BI'],
-    github: 'https://github.com/muskanalirizvi',
-    demo: '',
-  },
-  {
-    id: 'superstore-sales-dashboard',
-    category: 'Data Analytics',
-    title: 'Superstore Sales Dashboard',
-    summary: 'Interactive Power BI dashboard analyzing sales performance and trends.',
-    description:
-      'Developed an interactive Sales Dashboard using Power BI to analyze sales performance and trends. Performed data cleaning and transformation, and created basic DAX measures for KPIs. Designed visualizations and filters to support data-driven decision making.',
-    tags: ['Power BI', 'Data Visualization', 'DAX', 'Business Intelligence'],
-    github: 'https://github.com/muskanalirizvi',
+      'Developed a full-stack patient management system with a FastAPI backend supporting complete CRUD operations (create, read, update, delete) for patient health records. Trained and integrated a Gradient Boosting Classifier to predict diabetes risk from 8 health metrics (glucose, BMI, blood pressure, etc.), returning probability-scored predictions via a dedicated API endpoint. Built an interactive Streamlit dashboard with Plotly visualizations displaying patient statistics, prediction summaries, and recent activity. Implemented a lightweight JSON-based local data store for patient records, with a health-check endpoint for system status monitoring.',
+    tags: ['Python', 'FastAPI', 'Streamlit', 'Pandas', 'Plotly', 'Scikit-learn'],
+    github: 'https://github.com/muskanalirizvi/Patient-Health-API-CRUD-Testing-with-ML-Prediction.git',
     demo: '',
   },
 ];
