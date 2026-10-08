@@ -1,5 +1,35 @@
 const projects = [
   {
+    id: 'hr-policy-assistant',
+    category: 'Agentic AI',
+    title: 'HR Assistant: Full-Stack Agentic RAG Project',
+    summary:
+      'Full-stack AI HR assistant with a LangGraph agent and hybrid RAG for policy questions, employee records and leave requests.',
+    description:
+      "Built a full-stack AI HR assistant using Next.js and FastAPI, with a LangGraph + Gemini agent that answers policy questions through hybrid RAG (Qdrant, FlashRank reranking, Tavily web fallback). It also checks an employee's own records and handles leave requests, asking the employee to confirm before submitting them. Submitted requests are saved to MongoDB and posted to Slack through MCP servers. Login is secured with JWT and bcrypt.",
+    tags: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'FastAPI',
+      'MongoDB',
+      'LangGraph',
+      'LangChain',
+      'Gemini',
+      'Qdrant',
+      'FastEmbed',
+      'FlashRank',
+      'MCP',
+      'Tavily',
+      'Slack API',
+      'JWT',
+      'bcrypt',
+    ],
+    github: 'https://github.com/muskanalirizvi/hr-policy-assistant',
+    demo: 'https://hr-policy-assistant-teal.vercel.app/',
+  },
+  {
     id: 'ai-receptionist',
     category: 'Agentic AI',
     title: 'Smart Reception Assistant- Full-Stack Project',
@@ -91,6 +121,18 @@ const projects = [
       'Developed a full-stack patient management system with a FastAPI backend supporting complete CRUD operations (create, read, update, delete) for patient health records. Trained and integrated a Gradient Boosting Classifier to predict diabetes risk from 8 health metrics (glucose, BMI, blood pressure, etc.), returning probability-scored predictions via a dedicated API endpoint. Built an interactive Streamlit dashboard with Plotly visualizations displaying patient statistics, prediction summaries, and recent activity. Implemented a lightweight JSON-based local data store for patient records, with a health-check endpoint for system status monitoring.',
     tags: ['Python', 'FastAPI', 'Streamlit', 'Pandas', 'Plotly', 'Scikit-learn'],
     github: 'https://github.com/muskanalirizvi/Patient-Health-API-CRUD-Testing-with-ML-Prediction.git',
+    demo: '',
+  },
+  {
+    id: 'predictmaint',
+    category: 'Machine Learning',
+    title: 'PredictMaint: Machine Failure Prediction System',
+    summary:
+      'XGBoost predictive maintenance model for milling machine failures, served as a real-time FastAPI REST API.',
+    description:
+      'Developed a predictive maintenance model that predicts industrial milling machine failures from sensor readings, trained on the AI4I 2020 dataset (10,000 records, only 3.4% failures). Prevented data leakage by removing failure-mode columns, and added physics-based features (temperature difference, mechanical power from torque × angular speed, and tool strain). Trained an XGBoost classifier with scale_pos_weight to handle the class imbalance, using a stratified train/test split and 5-fold cross-validation. Tuned the decision threshold on out-of-fold predictions so the test set stayed unseen, reaching an F1-score of 0.87 (precision 0.93, recall 0.81) on the failure class. Deployed the model as a FastAPI REST API that runs the same feature engineering at inference time and returns real-time failure predictions with probability scores. Documented the full training workflow in a Jupyter notebook.',
+    tags: ['Python', 'XGBoost', 'Scikit-learn', 'FastAPI', 'Pandas'],
+    github: 'https://github.com/muskanalirizvi/Predictive-maintenance-model-with-FastAPI',
     demo: '',
   },
 ];
